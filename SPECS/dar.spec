@@ -14,7 +14,7 @@
 #
 Name:           dar
 Version:        2.4.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Software for making/restoring incremental CD/DVD backups
 
 URL:            http://dar.linux.free.fr/
@@ -31,6 +31,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires:  bzip2-devel
 BuildRequires:  openssl-devel
+BuildRequires:  libgcrypt-devel
 
 # Recommended, but no package yet in Epel.
 #Requires:       par2cmdline
