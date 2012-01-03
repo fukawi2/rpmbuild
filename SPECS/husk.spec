@@ -1,6 +1,6 @@
 Name:		husk
 Version:	0.9.5
-Release:	1
+Release:	2
 Summary:	Natural language wrapper around the Linux iptables packet filtering engine
 Source0:	http://download.sourceforge.net/husk/husk-0.9.5.tar.gz
 License:	GPL
@@ -39,7 +39,9 @@ echo "Example configuration is in /usr/share/doc/husk/"
 %files
 %{_bindir}/husk
 %{_bindir}/fire
-%{_sysconfdir}/husk/addr_groups.conf
+%config(noreplace) %{_sysconfdir}/husk/addr_groups.conf
+%config(noreplace) %{_sysconfdir}/husk/husk.conf
+%config(noreplace) %{_sysconfdir}/husk/interfaces.conf
 %{_sysconfdir}/husk/helpers/apple-ios.conf
 %{_sysconfdir}/husk/helpers/avg.conf
 %{_sysconfdir}/husk/helpers/dhcp.conf
@@ -51,8 +53,6 @@ echo "Example configuration is in /usr/share/doc/husk/"
 %{_sysconfdir}/husk/helpers/samba.conf
 %{_sysconfdir}/husk/helpers/snmp.conf
 %{_sysconfdir}/husk/helpers/sql.conf
-%{_sysconfdir}/husk/husk.conf
-%{_sysconfdir}/husk/interfaces.conf
 %{_docdir}/husk/ABOUT
 %{_docdir}/husk/LICENSE
 %{_docdir}/husk/README
