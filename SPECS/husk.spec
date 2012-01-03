@@ -1,8 +1,8 @@
 Name:		husk
-Version:	0.9.5
-Release:	2
+Version:	0.9.6
+Release:	1
 Summary:	Natural language wrapper around the Linux iptables packet filtering engine
-Source0:	http://download.sourceforge.net/husk/husk-0.9.5.tar.gz
+Source0:	http://download.sourceforge.net/husk/husk-0.9.6.tar.gz
 License:	GPL
 Group:		MyJunk
 BuildArch:	noarch
@@ -42,17 +42,20 @@ echo "Example configuration is in /usr/share/doc/husk/"
 %config(noreplace) %{_sysconfdir}/husk/addr_groups.conf
 %config(noreplace) %{_sysconfdir}/husk/husk.conf
 %config(noreplace) %{_sysconfdir}/husk/interfaces.conf
-%{_sysconfdir}/husk/helpers/apple-ios.conf
-%{_sysconfdir}/husk/helpers/avg.conf
-%{_sysconfdir}/husk/helpers/dhcp.conf
-%{_sysconfdir}/husk/helpers/dns.conf
-%{_sysconfdir}/husk/helpers/gotomeeting.conf
-%{_sysconfdir}/husk/helpers/icmp.conf
-%{_sysconfdir}/husk/helpers/mail.conf
-%{_sysconfdir}/husk/helpers/pptp.conf
-%{_sysconfdir}/husk/helpers/samba.conf
-%{_sysconfdir}/husk/helpers/snmp.conf
-%{_sysconfdir}/husk/helpers/sql.conf
+%config %{_sysconfdir}/husk/helpers/apple-ios.conf
+%config %{_sysconfdir}/husk/helpers/avg.conf
+%config %{_sysconfdir}/husk/helpers/dhcp.conf
+%config %{_sysconfdir}/husk/helpers/dns.conf
+%config %{_sysconfdir}/husk/helpers/gotomeeting.conf
+%config %{_sysconfdir}/husk/helpers/icmp.conf
+%config %{_sysconfdir}/husk/helpers/mail.conf
+%config %{_sysconfdir}/husk/helpers/pptp.conf
+%config %{_sysconfdir}/husk/helpers/samba.conf
+%config %{_sysconfdir}/husk/helpers/snmp.conf
+%config %{_sysconfdir}/husk/helpers/sql.conf
+%config %{_sysconfdir}/husk/helpers/dhcpv6.conf
+%config %{_sysconfdir}/husk/helpers/icmpv6.conf
+%config %{_sysconfdir}/husk/helpers/nfs.conf
 %{_docdir}/husk/ABOUT
 %{_docdir}/husk/LICENSE
 %{_docdir}/husk/README
