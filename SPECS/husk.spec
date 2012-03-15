@@ -1,8 +1,8 @@
 Name:		husk
-Version:	0.9.6
+Version:	0.9.9
 Release:	1
 Summary:	Natural language wrapper around the Linux iptables packet filtering engine
-Source0:	http://download.sourceforge.net/husk/husk-0.9.6.tar.gz
+Source0:	http://download.sourceforge.net/husk/husk-0.9.9.tar.gz
 License:	GPL
 Group:		MyJunk
 BuildArch:	noarch
@@ -56,10 +56,15 @@ echo "Example configuration is in /usr/share/doc/husk/"
 %config %{_sysconfdir}/husk/helpers/dhcpv6.conf
 %config %{_sysconfdir}/husk/helpers/icmpv6.conf
 %config %{_sysconfdir}/husk/helpers/nfs.conf
-%{_docdir}/husk/ABOUT
-%{_docdir}/husk/LICENSE
 %{_docdir}/husk/README
-%{_docdir}/husk/rules.conf.simple
-%{_docdir}/husk/rules.conf.standalone
+%{_docdir}/husk/doc/ABOUT
+%{_docdir}/husk/doc/LICENSE
+%{_docdir}/husk/doc/rules.conf.example
+%{_docdir}/husk/doc/rules.conf.simple
+%{_docdir}/husk/doc/rules.conf.standalone
+%{_docdir}/husk/fire.html
+%{_docdir}/husk/husk.conf.html
+%{_docdir}/husk/husk.html
 %{_mandir}/man1/fire.1p.gz
 %{_mandir}/man1/husk.1p.gz
+%{_mandir}/man5/husk.conf.5p.gz
