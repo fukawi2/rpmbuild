@@ -28,8 +28,8 @@ cd mod_macro-1.1.11/
 mkdir -p $RPM_BUILD_ROOT/%{_libdir}/httpd/modules/
 %{__install} -m 755 mod_macro.o $RPM_BUILD_ROOT/%{_libdir}/httpd/modules/mod_macro.so
 
-mkdir -p $RPM_BUILD_ROOT/etc/httpd/conf.d/
-%{__install} -m 644 %{SOURCE1} %{buildroot}/etc/httpd/conf.d/
+mkdir -p $RPM_BUILD_ROOT/%{_sysconfdir}/httpd/conf.d/
+%{__install} -m 644 %{SOURCE1} %{buildroot}/%{_sysconfdir}/httpd/conf.d/
 
 mkdir -p $RPM_BUILD_ROOT/$RPM_DOC_DIR/$RPM_PACKAGE_NAME-$RPM_PACKAGE_VERSION/
 %{__install} -m 644 CHANGES $RPM_BUILD_ROOT/$RPM_DOC_DIR/$RPM_PACKAGE_NAME-$RPM_PACKAGE_VERSION/
@@ -43,12 +43,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root)
 %doc mod_macro-1.1.11/CHANGES mod_macro-1.1.11/LICENSE mod_macro-1.1.11/README mod_macro-1.1.11/mod_macro.html
-/etc/httpd/conf.d/macro.conf
+%config(noreplace) %{_sysconfdir}/httpd/conf.d/macro.conf
 %{_libdir}/httpd/modules/mod_macro.so
-/usr/share/doc/apache2-mod_macro-1.1.11/CHANGES
-/usr/share/doc/apache2-mod_macro-1.1.11/LICENSE
-/usr/share/doc/apache2-mod_macro-1.1.11/README
-/usr/share/doc/apache2-mod_macro-1.1.11/mod_macro.html
-
 
 %changelog
