@@ -1,8 +1,8 @@
 Name:		husk
-Version:	0.9.11
+Version:	0.9.12
 Release:	1
 Summary:	Natural language wrapper around the Linux iptables packet filtering engine
-Source0:	http://download.sourceforge.net/husk/husk-0.9.11.tar.gz
+Source0:	http://download.sourceforge.net/husk/husk-0.9.12.tar.gz
 License:	GPL
 Group:		MyJunk
 BuildArch:	noarch
