@@ -1,1 +1,7 @@
 My rpmbuild tree
+
+Refer to:
+http://wiki.centos.org/HowTos/RebuildSRPM
+
+$ rpm -i /tmp/mypackage-1.0.0-1.src.rpm
+$ rpmbuild -ba
